@@ -24,11 +24,11 @@
 | image                               |activestorage| null: false       |
 | name                                | text        | null: false       |
 | info                                | text        | null: false       |
-| category_id                         |active hash  | null: false       |
-| condition_id                        |active hash  | null: false       |
-| shipping_id                         |active hash  | null: false       |
-| prefecture_id                       |active hash  | null: false       |
-| scheduled_delivery_id               |active hash  | null: false       |
+| category_id                         |integer      | null: false       |
+| condition_id                        |integer      | null: false       |
+| shipping_id                         |integer      | null: false       |
+| prefecture_id                       |integer      | null: false       |
+| scheduled_delivery_id               |integer      | null: false       |
 | price                               | integer     | null: false       |
 | user                                | references  | foreign_key: true |
 
@@ -54,11 +54,7 @@
 
 | Column        | Type        | Options           |
 |-------------  |-------------|------------------ |
-| prefecture_id | active hush | null: false       |
-| city          | string型    | null: false       ｜
-| address       | string型    | null: false       |
-| building      | string型    | null: false       |
-| phone_number  | integer型   | null: false       |
+| prefecture_id | integer     | null: false       |
 | purchase      | references  | foreign_key: true |
 
 ### Association
