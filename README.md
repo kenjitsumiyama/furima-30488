@@ -53,10 +53,10 @@
 
 | Column        | Type        | Options           |
 |-------------  |-------------|------------------ |
-| postal_code   | text        | null: false       |
-| city          | text        | null: false       |
-| address       | text        | null: false       |
-| building      | text        |                   |
+| postal_code   | string      | null: false       |
+| city          | string      | null: false       |
+| address       | string      | null: false       |
+| building      | string      |                   |
 | prefecture_id | integer     | null: false       |
 | phone_number  | string      | null: false       |
 | purchase      | references  | foreign_key: true |
