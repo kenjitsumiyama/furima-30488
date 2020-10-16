@@ -21,14 +21,14 @@
 
 | Column                              | Type        | Options           |
 |-------------------------------------|-------------|-------------------|
-| image                               |activestorage| null: false       |
-| name                                | text        | null: false       |
+| image                               |             | null: false       |
+| name                                | string      | null: false       |
 | info                                | text        | null: false       |
-| category_id                         |integer      | null: false       |
-| condition_id                        |integer      | null: false       |
-| shipping_id                         |integer      | null: false       |
-| prefecture_id                       |integer      | null: false       |
-| scheduled_delivery_id               |integer      | null: false       |
+| category_id                         | integer     | null: false       |
+| condition_id                        | integer     | null: false       |
+| shipping_id                         | integer     | null: false       |
+| prefecture_id                       | integer     | null: false       |
+| scheduled_delivery_id               | integer     | null: false       |
 | price                               | integer     | null: false       |
 | user                                | references  | foreign_key: true |
 
@@ -46,7 +46,7 @@
 
 ### Association
 
-- belongs_to :items
+- belongs_to :item
 - belongs_to :user
 - has_one : address
 
@@ -54,7 +54,12 @@
 
 | Column        | Type        | Options           |
 |-------------  |-------------|------------------ |
+| postal_code   |             | null: false       |
+| city          |             | null: false       |
+| address       |             | null: false       |
+| building      |             | null: false       |
 | prefecture_id | integer     | null: false       |
+| phone_number  |             | null: false       |
 | purchase      | references  | foreign_key: true |
 
 ### Association
