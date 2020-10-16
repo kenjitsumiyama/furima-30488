@@ -57,7 +57,7 @@
 | postal_code   |             | null: false       |
 | city          |             | null: false       |
 | address       |             | null: false       |
-| building      |             | null: false       |
+| building      |             |                   |
 | prefecture_id | integer     | null: false       |
 | phone_number  |             | null: false       |
 | purchase      | references  | foreign_key: true |
