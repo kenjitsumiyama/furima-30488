@@ -21,7 +21,6 @@
 
 | Column                              | Type        | Options           |
 |-------------------------------------|-------------|-------------------|
-| image                               |             | null: false       |
 | name                                | string      | null: false       |
 | info                                | text        | null: false       |
 | category_id                         | integer     | null: false       |
@@ -54,12 +53,12 @@
 
 | Column        | Type        | Options           |
 |-------------  |-------------|------------------ |
-| postal_code   |             | null: false       |
-| city          |             | null: false       |
-| address       |             | null: false       |
-| building      |             |                   |
+| postal_code   | text        | null: false       |
+| city          | text        | null: false       |
+| address       | text        | null: false       |
+| building      | text        |                   |
 | prefecture_id | integer     | null: false       |
-| phone_number  |             | null: false       |
+| phone_number  | text        | null: false       |
 | purchase      | references  | foreign_key: true |
 
 ### Association
