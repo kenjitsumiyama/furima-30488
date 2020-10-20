@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  #  describe '#create' do
+  
     before do
       @user = FactoryBot.build(:user)
       
     end   
-  #  end
+  
 
   describe 'ユーザー新規登録' do
     context '新規登録がうまくいくとき' do
