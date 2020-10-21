@@ -1,8 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   def index  
-      # @items = Item.all
-      # 今後のプルリクエストで拝見したいファイルが差分として上がってこない可能性があるので
+    @items = Item.all.order(id: "DESC")
   end
 
   def new
@@ -11,9 +10,8 @@ class ItemsController < ApplicationController
 
   
     def create
-      
       @item = Item.new(item_params)
-
+    
       if @item.save
         redirect_to root_path
       else
