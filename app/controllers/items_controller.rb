@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   def index  
-      # @items = Item.all
-      # 今後のプルリクエストで拝見したいファイルが差分として上がってこない可能性があるので
+    @items = Item.all.order(id: "DESC")
+    
   end
 
   def new
