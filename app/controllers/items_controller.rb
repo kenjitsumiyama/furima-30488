@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
-  
+  before_action :authenticate_user!, only: [:new]
   def index  
-      @items = Item.all
+      # @items = Item.all
+      # 今後のプルリクエストで拝見したいファイルが差分として上がってこない可能性があるので
   end
 
   def new
@@ -9,7 +10,6 @@ class ItemsController < ApplicationController
   end
 
   
-    #  Item.create(item_params)
     def create
       @item = Item.new(item_params)
 
