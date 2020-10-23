@@ -30,6 +30,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
+      user_signed_in? && current_user.id == @item.user.id
       redirect_to root_path
     else
       render :edit
