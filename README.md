@@ -34,9 +34,9 @@
 ### Association
 
 - belongs_to :user
-- has_one : purchase
+- has_one : order
 
-## purchases table
+## orders table
 
 | Column      | Type       | Options           |
 |-------------|------------|-------------------|
@@ -59,10 +59,10 @@
 | building      | string      |                   |
 | prefecture_id | integer     | null: false       |
 | phone_number  | string      | null: false       |
-| purchase      | references  | foreign_key: true |
+| order         | references  | foreign_key: true |
 
 ### Association
 
-- belongs_to :purchase
+- belongs_to :order
 
 
