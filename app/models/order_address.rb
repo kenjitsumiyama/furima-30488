@@ -8,6 +8,7 @@ class OrderAddress
     validates         :city
     validates         :address  
     validates         :phone_number, format:{with: /\A\d{11}\z/ }
+    validates         :token
   end
 
   with_options presence: true, numericality: { other_than: 1 } do

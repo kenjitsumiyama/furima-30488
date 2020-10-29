@@ -6,11 +6,8 @@ class Item < ApplicationRecord
    belongs_to_active_hash :prefecture
    belongs_to_active_hash :scheduled_delivery
    belongs_to :user
-   has_one :order
-   has_one_attached :image
-
-   
-
+   has_one :order , dependent: :destroy
+   has_one_attached :image, dependent: :destroy
 
   #空の投稿を保存できないようにする
   with_options presence: true do
