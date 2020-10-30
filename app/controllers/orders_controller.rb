@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
   end
 
   def item_nil_redirect_to_root
-    redirect_to_root_path unless @item.order.nil?
+    redirect_to root_path unless @item.order.nil?
   end
 
   def pay_item
