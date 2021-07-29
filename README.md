@@ -51,6 +51,7 @@
 
 ### addresses table
 
+
 | Column        | Type        | Options           |
 |-------------  |-------------|------------------ |
 | postal_code   | string      | null: false       |
